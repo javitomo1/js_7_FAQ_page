@@ -1,0 +1,85 @@
+:root {
+    --ffBody: 'Roboto Mono', monospace;
+    --ffTitle: 'Dancing Script', cursive;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #ddfffd;
+}
+h2 {
+    margin: 130px 0 50px 0;/*Posicionamiento del encabezado principal*/
+    font-family: var(--ffTitle);
+    font-size: 2.3em;
+    text-align: center;
+    text-transform: capitalize;
+    color: rgb(141, 109, 27);
+}
+.question {
+    width: 480px;
+    margin: 20px auto;/*Separacion entre contenedores y auto centrado con respecto al contenedor principal*/
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);/*Sombra con transparencia*/
+    text-transform: capitalize;
+    font-family: var(--ffBody);
+}
+.question-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;/*Posiciona los elementos p & i, dentro de su contenedor, el primero a la izquierda el segundo a la derecha*/
+}
+.question-title{
+    padding: 10px;/*Ajuste para centrar verticalmente el texto p hijo de .question-title sin afecta el elemento button & i*/
+}
+.question-title > p {
+    margin-left: 30px;
+}
+
+/*************     Configuracion del boton plus     ***************************************************/
+button {                                                                                            /**/
+    margin-right: 20px; /*Margen derecho con respecto al contenedor*/                               /**/
+    position: relative;/*Relative para posicionar el elemento i*/                                   /**/
+    width: 1.4em;/*Ancho del boton para ajustarlo al tamaño del elemento i*/                        /**/
+    height: 1.4em;/*Altura del boton para ajustarlo al tamaño del elemento i*/                      /**/
+    background: #fff;/*Mismo color de fondo que el contenedor, por defecto es gris*/              /**/
+    border: none;/*Eliminación el borde*/                                                           /**/
+}                                                                                                   /**/
+i {                                                                                                 /**/
+    font-size: 1.8em;/*Medida del icono*/                                                           /**/
+    position: absolute;/*Posicionamiento con respecto a button*/                                    /**/
+    top: -3px;/*Ajuste para posicionarlo dentro del button con su misma medida*/                    /**/
+    right: -3px;/*Ajuste para posicionarlo dentro del button con su misma medida*/                  /**/
+    color: rgb(141, 109, 27);                                                                     /**/
+}
+i:active {
+    transform: rotate(90deg);
+    transition: 0.3s;
+}                                                                                                  /**/
+/********************************************************************************************************/
+.question-text {
+    padding: 20px;
+    margin-top: 10px;
+    border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+
+/* Elementos ocultos */
+.question-text {
+    display: none;
+}
+.show-text .question-text {
+    display: block;
+}
+.minus-icon {
+    display: none;
+}
+.show-text .minus-icon {
+    display: inline;
+}
+.show-text .plus-icon {
+    display: none;
+}
